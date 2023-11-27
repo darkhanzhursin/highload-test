@@ -16,7 +16,7 @@ const updateBalance = async (req, res) => {
       if (isDeposit) {
         await deposit(foundUser, amount);
       } else {
-        withdraw(foundUser, amount);
+        await withdraw(foundUser, amount);
       }
     } catch (err) {
       console.error("Error updating balance:", err);
